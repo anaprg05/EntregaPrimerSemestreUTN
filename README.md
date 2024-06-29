@@ -50,8 +50,43 @@
 ### cd ..
 
 # CLASE 4
+### cd tecnicatura
+### cd class-git
+### ls
+### touch historia.txt
+### code .
+### -> Modificamos el archivo historia.txt colocando lo siguiente: Bienvenido mi nombre es Ana
+### ctrl + s
+### git status
+### git add .
+### git status
+### git commit -> Sin agregar -m veremos que pasa
+### -> Agregar mensaje y salir con
+### Esc -> Presionamos Escape 
+### :wq! + enter -> Y ya salimos si estamos en git bash con window
+### Esc + shift + z + z -> Salimos del mensaje para el commit, en linux, esto anda en algunas terminales
+### -> Agregamos otra línea de mensaje en historia.txt desde VSC: estoy estudiando programación
+### ctrl + s
+### git add .
+### git commit
+### -> Se abre un editor de código basado en línea de comandos, editor de texto como VSC llamado vim
+### Esc + i -> Para comenzar a escribir mensaje del commit, no suele ser necesario
+### ctrl + x -> Para salir en linux
+### s + enter -> Para decir si al cambio y aceptar el nombre, ósea no cambiamos el nombre, la (s) es de si y la (y) es de yes, no olvidar enter en linux
+### git show -> Vemos todos los cambios en el último commit
+### git log historia.txt -> Vemos todos los commit
+### q -> Para salir del registro de commits
+### -> Copiamos un hash mas antoguo y otro reciente, ingresamos el siguiente comando
+### git diff hash_commit_numerico hash_commit_numerico -> Comparamos diferentes commits y sus cambios, poner la versión mas vieja primero, luego la mas nueva
+### q -> Para salir
+### cd ..
+### cd ..
 
 # CLASE 5
+## CLASE DE TEORÍA
+### ¿Qué es Gitflow?
+### ¿Qué es branch (rama) y cómo funciona un merge en git?
+### Tipos de ramas
 
 # CLASE 6
 
@@ -67,5 +102,5 @@
 
 # CLASE 12
 
-# CLASE 13
+# CLASE 13-
 
