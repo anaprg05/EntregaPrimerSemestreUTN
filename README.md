@@ -48,3 +48,24 @@
 ### git log -> Para ver los dos commits hechos: Si tienes commiteada alguna clase anterior veras mas commits de los que yo tengo.
 ### cd ..
 ### cd ..
+
+# CLASE 4
+
+# CLASE 5
+
+# CLASE 6
+
+# CLASE 7
+
+# CLASE 8
+
+# CLASE 9
+
+# CLASE 10
+
+# CLASE 11
+
+# CLASE 12
+
+# CLASE 13
+
