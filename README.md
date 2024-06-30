@@ -180,12 +180,132 @@
 ### git log > log.txt -> guardar los logs en un archivo txt
 
 # CLASE 9
+## CLASE DE TEORÍA
+### REPASO
+### Abrir como adminstrados git bash #En window
+### cd Tecnicatura
+### cd class-git
+### code . -> En ubuntu
+### code . -> En window, abrir como administrador
+### ctrl + s -> Guardamos
+### clic mouse derecho -> Abrimos en el navegador con Live Server vemos los cambios
+### git status
+### git commit -am "mensaje del commit" -> Este solo funciona con archivos creado previamente
+### git commit -a -m "Mensaje del commit" -> Esto es lo mismo que el anterior
+### git commit -a + enter -> Se abrira el entorno para editar el vim con el mensaje
+### Escribir el mensaje
+### ctrl + x
+### s + enter -> No cambiar el nombre ni ruta de ubicación
+### git log -> Veremos los cambios guardados
+### q -> Para salir
+### git log --stat -> Veremos los cambios nombrando cada archivo
+### q -> Para salir
+### git branch -> Muestra en la rama que estamos, desde aquí crearemos una nueva
+### git show -> Muestra el último cambio que hicimos, esto significa que desde el HEAD -> master es que haremos cambios
+### q -> Para salir
+### ctrl + l -> Limpiamos consola
+### git branch segunda -> creamos una nueva rama
+### git show -> Nos muestra ahora que esta en el HEAD -> master, cabecera aquí es donde esta apuntando, es decir el último commit esta pegado a dos ramas distintas, aunque todavía estemos en master
+### q -> Para salir
+### git status -> No hay nada para hacer commit
+### git chekout segunda -> Nos movemos hacía otras ramas, en este caso a segunda, esto no se ve en mac ni en ubuntu, para ver donde estamos hay que ingresar...
+### git branch -> veremos en que rama estamos ubicados o ingresando...
+### git status -> Veremos en que HEAD estamos apuntando
+### VSC -> hacemos cambios que veremos con Nico
 
 # CLASE 10
+## CLASE DE TEORÍA
+# FUNCIONAMIENTO DE GIT MERGE
+## COMANDOS BÁSICOS DE GITHUB
+### git init -> crear un repositorio, si ya esta en la nube traerlo sin hacer git init
+### git add . -> agregar un archivo a staging.
+### git commit -m “mensaje” -> guardar el archivo en git con un mensaje.
+### git branch nombre_rama -> crear una nueva rama.
+### git checkout nombre_rama -> moverse entre ramas.
+### git push origin rama -> mandar cambios a un servidor remoto.
+### git fetch -> traer actualizaciones del servidor remoto y guardarlas en nuestro repositorio local.
+### git merge rama -> tiene dos usos. Uno es la fusión de ramas, funcionando como un commit en la rama actual, trayendo la rama indicada. Su otro uso es guardar los cambios de un servidor remoto en nuestro directorio.
+### git pull origin rama -> fetch y merge al mismo tiempo.
+### git checkout “codigo de version” “nombre del archivo” -> volver a la última versión de la que se ha hecho commit.
+### git reset -> vuelve al pasado sin posibilidad de volver al futuro, se debe usar con especificaciones.
+### git reset --soft -> vuelve a la versión en el repositorio, pero guarda los cambios en staging. Así, podemos aplicar actualizaciones a un nuevo commit.
+### git reset --hard -> todo vuelve a su versión anterior
+### git reset HEAD -> saca los cambios de staging, pero no los borra. Es lo opuesto a git add.
+### git rm -> elimina los archivos, pero no su historial. Si queremos recuperar algo, solo hay que regresar. se utiliza así:
+### git rm --cached -> elimina los archivos en staging pero los mantiene en el disco duro.
+### git rm --force -> elimina los archivos de git y del disco duro.
+### git status -> estado de archivos en el repositorio.
+### git log -> historia entera del archivo.
+### git log --stat -> cambios específicos en el archivo a partir de un commit.
+### git show -> cambios históricos y específicos hechos en un archivo.
+### git diff “codigo de version 1” “codigo de version 2” -> comparar cambios entre versiones.
+### git diff -> comparar directorio con staging.
+
+## COMANDO EN PRODUCCIÓN: TUVE QUE SOLUCIONAR UN CONFLICTO
+### git status -> En rama segunda: hacemos cambios en el archivo y guardamos
+### git commit -am "Finalizado el cambio en rama segunda" -> enter
+### git status
+### git checkout master #perdemos todo lo que ya habíamos hecho, hacemos cambios en el archivo agregando un nuevo parrafo y guardamos
+### git commit -am "Agregado el contenido adicional del archivo y un mejor aporte"
+### git checkout segunda -> vemos como desaparecen los cambios
+### git checkout master -> Aquí es que vamos a hacer el merge
+### git merge segunda -> En mi caso tuve algunos conflictos que solucione a través de VSC, aclaro que nunca debemos utilizar Fusionar los dos cambios
+### git commit -am "Arreglando conflicto" -> Una vez solucionado debemos commitear
+### git status -> Debemos revisar en el navegador y en el código si algo quedo mal y cambiarlo
+### git commit -am "Solucionado el conflicto 2"
+### git merge segunda -> ahora todo va bien
+### git commit -am "Volvi a comentar en este caso de mi area laboral" -> Añado información al archivo
+### git log
+### q -> Para salir
+### git commit -am "Para guardar estos cambios en el README.md"
+### git checkout segunda
+### git merge master -> Traemos todos los cambios
+### git commit -am "Cargamos esto ahora" #vamos a master y mergeamos
+### git checkout master
+### git merge segunda -> y terminamos con esto
 
 # CLASE 11
+### Abrimos el html y modificamos estando en la rama segunda
+### Luego commiteamos en la rama segunda y pasamos a la rama master, guardar y commitear, hacer un merge estando en master: pongo en orden los comandos abajo.
+### ctrl + s -> Guardamos los cambios en la rama segunda, ponemos cambios en css
+### git commit -am "Modifique el css y el color del texto" es un ejemplo
+### git checkout master -> Modificamos el html, ponemos código y css ponemos texto blue
+### ctrl + s -> Guardamos los cambios
+### git commit -am "Agregue suscripción, cambie el código y puse todo azul en css"
+### git merge segunda -> Hacemos un merge estando en master y veremos el conflicto
+
+### Para solucionar el conflicto podemos abrir el archivo con el editor de texto y modificar lo que nos este señalando y guardamos, esto en el css y en el html, lo podemos hacer desde VSC seleccionando: el cambio entrante.
+
+### Debemos ahora commitear estos cambios, abajo pongo los comandos.
+### git status
+### git commit -am "Solución de conflictos al mergear las ramas"
+### git checkout segunda -> Seguiremos con la versión anterior, porque el merge fue en master
+### git merge master -> Ahora pasamos los cambios a la rama segunda.
 
 # CLASE 12
+## CLASE TEÓRICA
+### ¿CÓMO FUNCIONAN LAS LLAVES PÚBLICAS Y PRIVADAS?
 
 # CLASE 13
+## CÓMO GENERAR LLAVES SSH
+### a. Generar tus llaves SSH
+### Recuerda que es muy buena idea proteger tu llave privada con una contraseña.
+### ssh-keygen -t rsa -b 4096 -C "tu@email.com"
 
+### b. Terminar de configurar nuestro sistema.
+### En Windows y Linux:
+### Encender el “servidor” de llaves SSH de tu computadora:
+### eval $(ssh-agent -s)
+### Añadir tu llave SSH a este “servidor”:
+### ssh-add ruta-donde-guardaste-tu-llave-privada
+
+### Por último les quiero hablar del 2FA: Segundo Factor de Autenticación. Este se puede hacer con varios dispositivos, y deberías hacerlo, ante el robo o perdida de un celular o ordenador, deberías tener un respaldo ante esto, este 2FA se puede hacer con diferentes generadores de códigos  de seguridad.
+### Para añadir un 2FA:
+### 1. Clic en nuestro perfil, arriba y a la derecha, seleccionamos...
+### 2. Settings
+### 3. Password and Authentication
+### 4. GitHub Mobile: GitHub Mobile can be used for two-factor authentication by installing the GitHub Mobile app and signing in to your account. -> GitHub Mobile se puede utilizar para la autenticación de 2FA instalando la aplicación GitHub Mobile e iniciando sesión en su cuenta.
+### Esto quiere decir que también se utiliza la app de GitHub donde al iniciar sesión desde cualquier dispositivo nos muestra un número que debemos ingresar en la app de nuestro dispositivo celular.
+### 5. Authenticator app: Edit
+### Esto para agregar a través de un QR una app que genere cada 1 segundo nuevos códigos numéricos para la autenticación, yo recomiendo la aplicación: Twilio Authy Authenticator
+### Es recomendable iniciar sesión, osea registrarnos y guardar estos datos para que al cambiar un dispositivo sigamos teniendo acceso.
